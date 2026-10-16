@@ -1,9 +1,16 @@
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem"}},"color":{"background":"var(--wp--preset--color--shortbread)"}}, "layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="padding-top:2rem;padding-bottom:2rem;background:var(--wp--preset--color--shortbread)">
-  <!-- wp:group {"align":"wide","layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"center"}} -->
-  <div class="wp-block-group alignwide footer-muted">
-    <!-- wp:paragraph --> <p>&copy; <!-- wp:site-title {"level":0} /--> – Hindbærsnitten.dk</p> <!-- /wp:paragraph -->
-    <!-- wp:social-links {"iconColor":"raspberry","iconColorValue":"#b10f3a","size":"has-normal-icon-size","layout":{"type":"flex","justifyContent":"right"}} /-->
+<!-- wp:group {"align":"full","className":"hs-site-footer","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull hs-site-footer">
+  <!-- wp:group {"align":"wide","className":"hs-footer-inner","layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"center"}} -->
+  <div class="wp-block-group alignwide hs-footer-inner">
+    <!-- wp:group {"className":"hs-footer-brand","layout":{"type":"flex","flexWrap":"wrap"}} -->
+    <div class="wp-block-group hs-footer-brand">
+      <!-- wp:paragraph --><p>©</p><!-- /wp:paragraph -->
+      <!-- wp:site-title {"level":0} /-->
+    </div>
+    <!-- /wp:group -->
+    <!-- wp:social-links {"iconColor":"raspberry","iconColorValue":"#A91D46","size":"has-normal-icon-size","layout":{"type":"flex","justifyContent":"right"}} -->
+    <ul class="wp-block-social-links has-normal-icon-size has-icon-color"></ul>
+    <!-- /wp:social-links -->
   </div>
   <!-- /wp:group -->
 </div>

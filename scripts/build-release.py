@@ -8,7 +8,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 SLUG = 'hindbaersnitten-child'
 HEADER = 'style.css'
-ENTRIES = ['style.css', 'functions.php', 'theme.json', 'templates', 'parts', 'patterns', 'assets', 'screenshot.png', 'includes', 'lib', 'README.md']
+ENTRIES = ['style.css', 'functions.php', 'theme.json', 'templates', 'parts', 'patterns', 'assets', 'screenshot.png', 'includes', 'lib', 'README.md', 'CHANGELOG.md']
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--tag', help='Require a stable vMAJOR.MINOR.PATCH tag matching the header')

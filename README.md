@@ -48,7 +48,7 @@ uden for pakken. Tag backup før første opdatering.
 
 1. Opdatér `Version` i `style.css`.
 2. Commit og push ændringerne. Workflowet kontrollerer PHP-syntaks og bygger ZIP på branches og pull requests.
-3. Opret et tilsvarende stabilt tag, fx `git tag v1.0.1`, og push det med `git push origin v1.0.1`.
+3. Opret et tilsvarende stabilt tag, fx `git tag v1.1.0`, og push det med `git push origin v1.1.0`.
 4. Workflowet afviser uoverensstemmelse mellem tag og version, bygger ZIP,
    uploader den til en draft release og publicerer derefter releasen.
 
@@ -56,7 +56,7 @@ Workflowet bruger repositoryets `GITHUB_TOKEN` med `contents: write` til release
 GitHub Actions skal være aktiveret. Installér den navngivne ZIP, ikke GitHubs
 “Source code”-arkiv. ZIP-filen indeholder ikke tests, workflows, backups eller `desktop.ini`.
 
-Byg lokalt: `python3 scripts/build-release.py --tag v1.0.1`.
+Byg lokalt: `python3 scripts/build-release.py --tag v1.1.0`.
 Output er `dist/hindbaersnitten-child.zip` (ikke committed).
 
 ### Kontrol før første udgivelse
@@ -72,3 +72,30 @@ Integrationstest (med begge komponenter aktive):
 `php tests/github-updates.php /path/to/wordpress/wp-load.php`.
 Testen simulerer GitHub-svar og kontrollerer stabile releases, drafts,
 prereleases, manglende eller forkerte ZIP-filer og manglende releases.
+
+
+## Design i version 1.1.0
+
+Varm glasurfarvet baggrund, kagefarvede sektioner og hindbærrøde accenter.
+Fraunces bruges til overskrifter og Manrope til tekst og navigation; begge
+skrifter er inkluderet lokalt som WOFF2 med SIL OFL-licenser i `assets/fonts`.
+Temaet sender ingen forespørgsler til eksterne skrifttjenester.
+
+Fælles afstandsskala, 720 px læsebredde og op til 1180 px til brede oversigter.
+Indlægskort står i tre kolonner på pc, to på tablet og én på mobil.
+Menu, knapper og afstande tilpasses mindre skærme. Fokusmarkeringer og
+reduceret bevægelse understøttes. Anmeldelsespluginets flader følger temaets farver.
+Sideindhold og API-data ændres ikke ved temaopdateringen.
+
+WordPress kan have gemt ændringer i skabeloner, header/footer eller globale
+stilarter gennem webstedseditoren. Sådanne ændringer har forrang over temafilerne
+og overskrives ikke automatisk. Hvis det nye layout ikke ses, skal de pågældende
+tilpasninger gennemgås under Udseende → Editor. Gem en kopi af egne tilpasninger,
+før de eventuelt nulstilles. Genanvendte mønstre i eksisterende indhold opdateres
+heller ikke automatisk, hvis de blev indsat som almindelige blokke.
+
+Lokale kontroller:
+`php tests/theme-config.php /path/to/wordpress/wp-load.php` og
+`python3 scripts/build-release.py --tag v1.1.0`.
+
+`screenshot.png` viser det nye tema med eksempeltekst; eksemplerne tilføjes ikke til hjemmesidens indhold.

@@ -4,51 +4,63 @@
   "settings": {
     "custom": {
       "brand": {
-        "raspberry": "#b10f3a",
-        "jam": "#d81b60",
-        "shortbread": "#f5e6cc",
-        "icing": "#fff8f4",
-        "chocolate": "#4e342e",
-        "mint": "#6fcf97",
-        "ink": "#222222"
+        "raspberry": "#A91D46",
+        "jam": "#C94C70",
+        "shortbread": "#F2E4D2",
+        "icing": "#FFF9F6",
+        "chocolate": "#3C2928",
+        "mint": "#D5DFD4",
+        "ink": "#3C2928",
+        "muted": "#746965",
+        "white": "#FFFFFF"
       }
     },
     "color": {
       "palette": [
         {
           "slug": "raspberry",
-          "name": "Raspberry",
-          "color": "#b10f3a"
+          "name": "Hindbær",
+          "color": "#A91D46"
         },
         {
           "slug": "jam",
-          "name": "Jam",
-          "color": "#d81b60"
+          "name": "Marmelade",
+          "color": "#C94C70"
         },
         {
           "slug": "shortbread",
-          "name": "Shortbread",
-          "color": "#f5e6cc"
+          "name": "Kagebund",
+          "color": "#F2E4D2"
         },
         {
           "slug": "icing",
-          "name": "Icing",
-          "color": "#fff8f4"
+          "name": "Glasur",
+          "color": "#FFF9F6"
         },
         {
           "slug": "chocolate",
-          "name": "Chocolate",
-          "color": "#4e342e"
+          "name": "Chokolade",
+          "color": "#3C2928"
         },
         {
           "slug": "mint",
-          "name": "Mint",
-          "color": "#6fcf97"
+          "name": "Salvie",
+          "color": "#D5DFD4"
         },
         {
           "slug": "ink",
-          "name": "Ink",
-          "color": "#222222"
+          "name": "Tekst",
+          "color": "#3C2928"
+        },
+        {
+          "slug": "muted",
+          "name": "Varm grå",
+          "color": "#746965"
+        },
+        {
+          "slug": "white",
+          "name": "Hvid",
+          "color": "#FFFFFF"
         }
       ],
       "defaultPalette": false,
@@ -57,23 +69,95 @@
       "link": true
     },
     "typography": {
+      "fluid": true,
+      "dropCap": false,
       "fontFamilies": [
         {
-          "fontFamily": "\"Atkinson Hyperlegible\", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, sans-serif",
-          "name": "Atkinson / System",
-          "slug": "atkinson"
+          "fontFamily": "\"Manrope\", system-ui, sans-serif",
+          "name": "Manrope",
+          "slug": "manrope",
+          "fontFace": [
+            {
+              "fontFamily": "Manrope",
+              "fontStyle": "normal",
+              "fontWeight": "200 800",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/manrope-latin.woff2"
+              ]
+            }
+          ]
         },
         {
           "fontFamily": "\"Fraunces\", Georgia, serif",
-          "name": "Fraunces / Serif",
-          "slug": "fraunces"
+          "name": "Fraunces",
+          "slug": "fraunces",
+          "fontFace": [
+            {
+              "fontFamily": "Fraunces",
+              "fontStyle": "normal",
+              "fontWeight": "100 900",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/fraunces-latin.woff2"
+              ]
+            }
+          ]
+        },
+        {
+          "fontFamily": "\"Manrope\", system-ui, sans-serif",
+          "name": "Manrope (tidligere Atkinson)",
+          "slug": "atkinson"
         }
       ],
-      "dropCap": false
+      "fontSizes": [
+        {
+          "slug": "small",
+          "name": "Lille",
+          "size": "0.875rem",
+          "fluid": false
+        },
+        {
+          "slug": "medium",
+          "name": "Brødtekst",
+          "size": "1.125rem",
+          "fluid": {
+            "min": "1.0625rem",
+            "max": "1.125rem"
+          }
+        },
+        {
+          "slug": "large",
+          "name": "Stor",
+          "size": "1.5rem",
+          "fluid": {
+            "min": "1.25rem",
+            "max": "1.5rem"
+          }
+        },
+        {
+          "slug": "x-large",
+          "name": "Overskrift",
+          "size": "2.75rem",
+          "fluid": {
+            "min": "1.8rem",
+            "max": "2.75rem"
+          }
+        },
+        {
+          "slug": "xx-large",
+          "name": "Hovedoverskrift",
+          "size": "4rem",
+          "fluid": {
+            "min": "2.25rem",
+            "max": "4rem"
+          }
+        }
+      ]
     },
     "layout": {
       "contentSize": "720px",
-      "wideSize": "1120px"
+      "wideSize": "1180px"
     },
     "spacing": {
       "units": [
@@ -84,8 +168,36 @@
         "vw",
         "vh"
       ],
-      "blockGap": "1.2rem"
-    }
+      "blockGap": "1.2rem",
+      "spacingSizes": [
+        {
+          "slug": "20",
+          "name": "Tæt",
+          "size": "0.5rem"
+        },
+        {
+          "slug": "30",
+          "name": "Lille",
+          "size": "1rem"
+        },
+        {
+          "slug": "40",
+          "name": "Mellem",
+          "size": "1.5rem"
+        },
+        {
+          "slug": "50",
+          "name": "Stor",
+          "size": "2rem"
+        },
+        {
+          "slug": "60",
+          "name": "Sektion",
+          "size": "clamp(2rem, 5vw, 5rem)"
+        }
+      ]
+    },
+    "useRootPaddingAwareAlignments": true
   },
   "styles": {
     "color": {
@@ -93,13 +205,18 @@
       "text": "var(--wp--preset--color--ink)"
     },
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--atkinson)",
-      "lineHeight": "1.6"
+      "fontFamily": "var(--wp--preset--font-family--manrope)",
+      "fontSize": "var(--wp--preset--font-size--medium)",
+      "lineHeight": "1.7",
+      "fontWeight": "400"
     },
     "elements": {
       "heading": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--fraunces)"
+          "fontFamily": "var(--wp--preset--font-family--fraunces)",
+          "fontWeight": "600",
+          "lineHeight": "1.15",
+          "letterSpacing": "-0.025em"
         },
         "color": {
           "text": "var(--wp--preset--color--chocolate)"
@@ -108,38 +225,84 @@
       "link": {
         "color": {
           "text": "var(--wp--preset--color--raspberry)"
+        },
+        "typography": {
+          "textDecoration": "underline"
+        },
+        ":hover": {
+          "color": {
+            "text": "var(--wp--preset--color--chocolate)"
+          }
+        }
+      },
+      "h1": {
+        "typography": {
+          "fontSize": "clamp(2.25rem, 4.8vw, 4rem)"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontSize": "clamp(1.8rem, 3.5vw, 2.75rem)"
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontSize": "clamp(1.35rem, 2.2vw, 1.85rem)"
         }
       }
     },
     "blocks": {
       "core/button": {
         "border": {
-          "radius": "999px"
+          "radius": "10px"
         },
         "color": {
           "background": "var(--wp--preset--color--raspberry)",
-          "text": "white"
+          "text": "#FFFFFF"
+        },
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--manrope)",
+          "fontWeight": "700",
+          "fontSize": "1rem"
         },
         "spacing": {
           "padding": {
-            "top": "0.6rem",
-            "right": "1rem",
-            "bottom": "0.6rem",
-            "left": "1rem"
+            "top": ".8rem",
+            "bottom": ".8rem",
+            "left": "1.4rem",
+            "right": "1.4rem"
           }
         }
       },
       "core/post-terms": {
         "typography": {
-          "fontStyle": "italic",
-          "fontSize": "0.95rem"
+          "fontStyle": "normal",
+          "fontSize": ".875rem"
+        },
+        "color": {
+          "text": "var(--wp--preset--color--muted)"
         }
       },
       "core/navigation": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--fraunces)",
-          "fontSize": "1.05rem"
+          "fontFamily": "var(--wp--preset--font-family--manrope)",
+          "fontSize": "0.9375rem",
+          "fontWeight": "600"
         }
+      },
+      "core/separator": {
+        "color": {
+          "text": "var(--wp--preset--color--shortbread)"
+        }
+      }
+    },
+    "spacing": {
+      "blockGap": "1.5rem",
+      "padding": {
+        "left": "clamp(1.25rem, 4vw, 3rem)",
+        "right": "clamp(1.25rem, 4vw, 3rem)",
+        "top": "0",
+        "bottom": "0"
       }
     }
   },

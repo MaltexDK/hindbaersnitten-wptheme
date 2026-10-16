@@ -1,10 +1,10 @@
 <!-- wp:template-part {"slug":"header","theme":"hindbaersnitten-child","area":"header"} /-->
-<!-- wp:group {"layout":{"type":"constrained"}} -->
-<div class="wp-block-group">
+<!-- wp:group {"layout":{"type":"constrained"},"tagName":"main","anchor":"hs-main","className":"hs-main","align":"wide"} -->
+<main class="wp-block-group alignwide hs-main" id="hs-main">
   <!-- wp:heading {"level":1} --><h1>Anmeldelser</h1><!-- /wp:heading -->
   <!-- wp:query {"queryId":4,"query":{"perPage":12,"postType":"anmeldelse","order":"desc","orderBy":"date"}} -->
   <div class="wp-block-query">
-    <!-- wp:post-template -->
+    <!-- wp:post-template {"className":"hs-post-grid"} -->
       <!-- wp:group {"className":"card"} -->
       <div class="wp-block-group card">
         <!-- wp:post-title {"isLink":true} /-->
@@ -25,6 +25,6 @@
     <!-- wp:query-pagination /-->
   </div>
   <!-- /wp:query -->
-</div>
+</main>
 <!-- /wp:group -->
 <!-- wp:template-part {"slug":"footer","theme":"hindbaersnitten-child","area":"footer"} /-->
