@@ -1,0 +1,9 @@
+/* Små finjusteringer */
+.wp-site-blocks{scroll-behavior:smooth}
+.wp-block-separator.is-style-wide{border-color:var(--wp--preset--color--shortbread)}
+.badge-rating{display:inline-flex;gap:.25rem;align-items:center;padding:.2rem .5rem;border-radius:.5rem;background:var(--wp--preset--color--shortbread);color:var(--wp--preset--color--chocolate);font-weight:600}
+.krymmel{display:inline-block;width:.6rem;height:.6rem;border-radius:50%;background:var(--wp--preset--color--raspberry);box-shadow:0 0 0 1px rgba(0,0,0,.05) inset}
+.header-logo{font-family:var(--wp--preset--font-family--fraunces); font-weight:800; letter-spacing:.5px}
+.card{border:1px solid #eee;border-radius:1rem;padding:1rem;background:white}
+.map-holder{aspect-ratio:16/9;border-radius:1rem;overflow:hidden;border:1px solid #eee}
+.footer-muted{opacity:.8}

@@ -1,0 +1,30 @@
+<!-- wp:template-part {"slug":"header","theme":"hindbaersnitten-child","area":"header"} /-->
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group">
+  <!-- wp:heading {"level":1} --><h1>Anmeldelser</h1><!-- /wp:heading -->
+  <!-- wp:query {"queryId":4,"query":{"perPage":12,"postType":"anmeldelse","order":"desc","orderBy":"date"}} -->
+  <div class="wp-block-query">
+    <!-- wp:post-template -->
+      <!-- wp:group {"className":"card"} -->
+      <div class="wp-block-group card">
+        <!-- wp:post-title {"isLink":true} /-->
+        <!-- wp:post-featured-image {"isLink":true} /-->
+        <!-- wp:post-excerpt {"moreText":"Læs anmeldelsen"} /-->
+        <!-- wp:group {"layout":{"type":"flex","justifyContent":"left"}} -->
+        <div class="wp-block-group">
+          <!-- wp:paragraph {"className":"badge-rating"} -->
+          <p class="badge-rating">Karakter:
+            <!-- wp:shortcode -->[krymmel]<!-- /wp:shortcode -->
+          </p>
+          <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:group -->
+      </div>
+      <!-- /wp:group -->
+    <!-- /wp:post-template -->
+    <!-- wp:query-pagination /-->
+  </div>
+  <!-- /wp:query -->
+</div>
+<!-- /wp:group -->
+<!-- wp:template-part {"slug":"footer","theme":"hindbaersnitten-child","area":"footer"} /-->

@@ -1,0 +1,158 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "custom": {
+      "brand": {
+        "raspberry": "#b10f3a",
+        "jam": "#d81b60",
+        "shortbread": "#f5e6cc",
+        "icing": "#fff8f4",
+        "chocolate": "#4e342e",
+        "mint": "#6fcf97",
+        "ink": "#222222"
+      }
+    },
+    "color": {
+      "palette": [
+        {
+          "slug": "raspberry",
+          "name": "Raspberry",
+          "color": "#b10f3a"
+        },
+        {
+          "slug": "jam",
+          "name": "Jam",
+          "color": "#d81b60"
+        },
+        {
+          "slug": "shortbread",
+          "name": "Shortbread",
+          "color": "#f5e6cc"
+        },
+        {
+          "slug": "icing",
+          "name": "Icing",
+          "color": "#fff8f4"
+        },
+        {
+          "slug": "chocolate",
+          "name": "Chocolate",
+          "color": "#4e342e"
+        },
+        {
+          "slug": "mint",
+          "name": "Mint",
+          "color": "#6fcf97"
+        },
+        {
+          "slug": "ink",
+          "name": "Ink",
+          "color": "#222222"
+        }
+      ],
+      "defaultPalette": false,
+      "background": true,
+      "text": true,
+      "link": true
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "\"Atkinson Hyperlegible\", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, sans-serif",
+          "name": "Atkinson / System",
+          "slug": "atkinson"
+        },
+        {
+          "fontFamily": "\"Fraunces\", Georgia, serif",
+          "name": "Fraunces / Serif",
+          "slug": "fraunces"
+        }
+      ],
+      "dropCap": false
+    },
+    "layout": {
+      "contentSize": "720px",
+      "wideSize": "1120px"
+    },
+    "spacing": {
+      "units": [
+        "px",
+        "em",
+        "rem",
+        "%",
+        "vw",
+        "vh"
+      ],
+      "blockGap": "1.2rem"
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--icing)",
+      "text": "var(--wp--preset--color--ink)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--atkinson)",
+      "lineHeight": "1.6"
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--fraunces)"
+        },
+        "color": {
+          "text": "var(--wp--preset--color--chocolate)"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "var(--wp--preset--color--raspberry)"
+        }
+      }
+    },
+    "blocks": {
+      "core/button": {
+        "border": {
+          "radius": "999px"
+        },
+        "color": {
+          "background": "var(--wp--preset--color--raspberry)",
+          "text": "white"
+        },
+        "spacing": {
+          "padding": {
+            "top": "0.6rem",
+            "right": "1rem",
+            "bottom": "0.6rem",
+            "left": "1rem"
+          }
+        }
+      },
+      "core/post-terms": {
+        "typography": {
+          "fontStyle": "italic",
+          "fontSize": "0.95rem"
+        }
+      },
+      "core/navigation": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--fraunces)",
+          "fontSize": "1.05rem"
+        }
+      }
+    }
+  },
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    }
+  ]
+}

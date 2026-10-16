@@ -1,0 +1,21 @@
+<!-- wp:template-part {"slug":"header","theme":"hindbaersnitten-child","area":"header"} /-->
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group">
+  <!-- wp:query-title {"type":"archive"} /-->
+  <!-- wp:query {"queryId":3,"query":{"perPage":12,"postType":"any"}} -->
+  <div class="wp-block-query">
+    <!-- wp:post-template -->
+      <!-- wp:group {"className":"card"} -->
+      <div class="wp-block-group card">
+        <!-- wp:post-title {"isLink":true} /-->
+        <!-- wp:post-featured-image {"isLink":true} /-->
+        <!-- wp:post-excerpt {"moreText":"Læs mere"} /-->
+      </div>
+      <!-- /wp:group -->
+    <!-- /wp:post-template -->
+    <!-- wp:query-pagination /-->
+  </div>
+  <!-- /wp:query -->
+</div>
+<!-- /wp:group -->
+<!-- wp:template-part {"slug":"footer","theme":"hindbaersnitten-child","area":"footer"} /-->

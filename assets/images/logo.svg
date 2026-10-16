@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="128" viewBox="0 0 512 128">
+  <rect width="512" height="128" fill="#fff8f4"/>
+  <rect x="8" y="24" width="496" height="80" rx="12" fill="#f5e6cc" stroke="#4e342e" stroke-width="2"/>
+  <rect x="12" y="28" width="488" height="72" rx="10" fill="#fff8f4" stroke="#d81b60" stroke-width="2" stroke-dasharray="6 6"/>
+  <circle cx="64" cy="64" r="6" fill="#b10f3a"/>
+  <circle cx="84" cy="54" r="6" fill="#b10f3a"/>
+  <circle cx="104" cy="70" r="6" fill="#b10f3a"/>
+  <text x="140" y="78" font-family="Georgia, serif" font-weight="700" font-size="36" fill="#4e342e">Hindbærsnitten.dk</text>
+</svg>
