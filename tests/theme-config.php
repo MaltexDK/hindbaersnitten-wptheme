@@ -26,8 +26,23 @@ foreach (glob($root.'/templates/*.html') as $file) {
     hs_theme_verify($mains === 1, 'Exactly one main landmark required: '.basename($file));
 }
 $header = file_get_contents($root.'/parts/header.html');
-hs_theme_verify(str_contains($header, '"level":0'), 'Site title must not duplicate page h1');
+hs_theme_verify(str_contains($header, 'wp:site-logo') && !str_contains($header, 'wp:site-title'), 'Header must use a logo without a duplicate site title');
 wp_enqueue_scripts();
 hs_theme_verify(wp_style_is('hindbaersnitten-custom','enqueued'), 'Theme stylesheet not enqueued');
 hs_theme_verify(current_theme_supports('editor-styles'), 'Editor stylesheet support missing');
 echo "PASS: local fonts, font-display, registered template blocks, main landmarks, header semantics and frontend/editor styles\n";
+
+$no_logo = function () { return 0; };
+add_filter('theme_mod_custom_logo', $no_logo, PHP_INT_MAX);
+$logo_block = ['blockName'=>'core/site-logo', 'attrs'=>['className'=>'hs-header-logo', 'width'=>460], 'innerContent'=>[]];
+$logo = render_block($logo_block);
+hs_theme_verify(str_contains($logo, '/assets/images/hindbaersnitten-logo.png'), 'Packaged fallback logo missing');
+hs_theme_verify(str_contains($logo, 'rel="home"'), 'Logo does not link home');
+hs_theme_verify(render_block(['blockName'=>'core/site-logo','attrs'=>[], 'innerContent'=>[]]) === '', 'Fallback must not change unrelated logo blocks');
+$custom_logo = function () { return '<a href="/" class="custom-logo-link"><img src="https://example.test/chosen-logo.png" alt="Valgt logo"></a>'; };
+add_filter('get_custom_logo', $custom_logo);
+$logo = render_block($logo_block);
+hs_theme_verify(str_contains($logo, 'chosen-logo.png') && !str_contains($logo, 'hindbaersnitten-logo.png'), 'User-selected logo must take precedence');
+remove_filter('get_custom_logo', $custom_logo);
+remove_filter('theme_mod_custom_logo', $no_logo, PHP_INT_MAX);
+echo "PASS: fallback logo, home link, scoped fallback and selected-logo precedence\n";

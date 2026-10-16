@@ -1,3 +1,15 @@
+## 1.2.0
+
+- Logo over en indrammet, kagefarvet menu på brede skærme.
+- Logo og indrammet burgermenu ved siden af hinanden ved 1024 px og derunder.
+- Afrundede menupunkter, tydelig aktiv side, fokusmarkeringer og indrammede undermenuer.
+- Det medfølgende logo vises, hvis der ikke er valgt et logo i WordPress.
+- Genanvendeligt mønster: Header – logo og menulinje.
+
+Gemte headertilpasninger har forrang over temaets header. Vælg det nye
+headermønster i webstedseditoren, hvis den gamle header fortsat vises.
+Eksisterende menuer og logoindstillinger overskrives ikke.
+
 ## 1.1.0
 
 - Varm glasurfarvet baggrund, kagefarvede flader og hindbærrøde accenter.

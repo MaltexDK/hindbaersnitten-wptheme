@@ -48,7 +48,7 @@ uden for pakken. Tag backup før første opdatering.
 
 1. Opdatér `Version` i `style.css`.
 2. Commit og push ændringerne. Workflowet kontrollerer PHP-syntaks og bygger ZIP på branches og pull requests.
-3. Opret et tilsvarende stabilt tag, fx `git tag v1.1.0`, og push det med `git push origin v1.1.0`.
+3. Opret et tilsvarende stabilt tag, fx `git tag v1.2.0`, og push det med `git push origin v1.2.0`.
 4. Workflowet afviser uoverensstemmelse mellem tag og version, bygger ZIP,
    uploader den til en draft release og publicerer derefter releasen.
 
@@ -56,7 +56,7 @@ Workflowet bruger repositoryets `GITHUB_TOKEN` med `contents: write` til release
 GitHub Actions skal være aktiveret. Installér den navngivne ZIP, ikke GitHubs
 “Source code”-arkiv. ZIP-filen indeholder ikke tests, workflows, backups eller `desktop.ini`.
 
-Byg lokalt: `python3 scripts/build-release.py --tag v1.1.0`.
+Byg lokalt: `python3 scripts/build-release.py --tag v1.2.0`.
 Output er `dist/hindbaersnitten-child.zip` (ikke committed).
 
 ### Kontrol før første udgivelse
@@ -96,6 +96,30 @@ heller ikke automatisk, hvis de blev indsat som almindelige blokke.
 
 Lokale kontroller:
 `php tests/theme-config.php /path/to/wordpress/wp-load.php` og
-`python3 scripts/build-release.py --tag v1.1.0`.
+`python3 scripts/build-release.py --tag v1.2.0`.
 
 `screenshot.png` viser det nye tema med eksempeltekst; eksemplerne tilføjes ikke til hjemmesidens indhold.
+
+
+## Header i version 1.2.0
+
+På skærme over 1024 px står logoet over en indrammet, kagefarvet menulinje.
+Ved 1024 px og derunder står logo og burgermenu ved siden af hinanden.
+Menuen har tydelig hover-/fokusmarkering, hindbærrød markering af den aktuelle
+side og indrammede undermenuer. Lange menuer kan stå over to rækker på pc.
+
+WordPress' valgte webstedslogo bruges. Er intet logo valgt, viser temaet det
+medfølgende `assets/images/hindbaersnitten-logo.png`. Logo og menupunkter kan
+fortsat redigeres med de almindelige Webstedslogo- og Navigation-blokke.
+Der oprettes ikke en ny menu, og eksisterende menuer ændres ikke.
+
+### Hvis du har redigeret headeren i WordPress
+
+En gemt header i webstedseditoren har forrang over `parts/header.html`.
+Åbn **Udseende → Editor**, find din header under **Mønstre → Skabelondele**,
+og gem eventuelt en kopi af den før ændring. Erstat dens layout med mønstret
+**Header – logo og menulinje** fra temaets mønstre, eller nulstil headeren til
+temaets udgave, hvis du ønsker at fjerne egne headertilpasninger.
+Vælg din eksisterende menu i Navigation-blokken og det ønskede logo i
+Webstedslogo-blokken. Gem ændringerne. De præcise menunavne kan variere med
+WordPress-version og sprog. Opdateringen nulstiller ikke dine tilpasninger automatisk.
