@@ -14,7 +14,7 @@ Et child-theme til **Twenty Twenty-Five** med farver inspireret af en hindbærsn
 4. Gå til **Udseende → Editor** for at justere skabeloner og stilarter.
 
 ## Sider
-- Forsiden bruger mønstret *Forsidehero* og lister seneste indlæg.
+- Forsiden viser indholdet fra siden valgt under **Indstillinger → Læsning → En statisk side**. Tilføj overskrift, tekst, billeder og Snitter-blokke på selve siden.
 - `Kort over anmeldelser`-skabelonen (page-kort.html) har en placeholder til et shortcode `[hindkort]`.
 
 ## Noter
@@ -123,3 +123,12 @@ temaets udgave, hvis du ønsker at fjerne egne headertilpasninger.
 Vælg din eksisterende menu i Navigation-blokken og det ønskede logo i
 Webstedslogo-blokken. Gem ændringerne. De præcise menunavne kan variere med
 WordPress-version og sprog. Opdateringen nulstiller ikke dine tilpasninger automatisk.
+
+## Statisk forside fra version 1.2.1
+
+Forsideskabelonen indeholder Indlægsindhold mellem header og footer. Den indsætter
+ikke længere et fast introafsnit eller en indlægsliste. Rediger din valgte side
+under Sider for at ændre indholdet, inklusive eventuel hovedoverskrift.
+Hvis en tidligere Forside-skabelon er gemt i webstedseditoren, har den forrang.
+Gem en kopi af egne tilpasninger og nulstil Forside under Udseende → Editor →
+Skabeloner, eller erstat manuelt det faste indhold med blokken Indlægsindhold.

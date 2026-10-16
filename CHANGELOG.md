@@ -1,3 +1,9 @@
+## 1.2.1
+
+- Forsideskabelonen viser nu indholdet fra den valgte statiske side via Indlægsindhold.
+- Det faste heroafsnit og indlægslisten er fjernet fra forsideskabelonen.
+- Header, footer og sidens egne blokke bevares. Gemte skabelontilpasninger skal eventuelt nulstilles manuelt.
+
 ## 1.2.0
 
 - Logo over en indrammet, kagefarvet menu på brede skærme.
