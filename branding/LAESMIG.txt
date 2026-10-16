@@ -1,0 +1,9 @@
+Hindbærsnitten.dk – logo og webstedsikon
+
+hindbaersnitten-logo.png: vandret logo, 2176 × 723 px, gennemsigtig PNG.
+hindbaersnitten-webstedsikon.png: kvadratisk ikon, 1254 × 1254 px, gennemsigtig PNG.
+
+Upload filerne til WordPress' mediebibliotek.
+Vælg ikonet under Indstillinger → Generelt → Webstedsikon.
+Vælg logoet i en Webstedslogo-blok i headeren under Udseende → Editor.
+Undgå at vise både det tekstholdige logo og webstedets navn ved siden af hinanden.
