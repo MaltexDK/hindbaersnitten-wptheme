@@ -22,3 +22,5 @@ add_action( 'init', function () {
         [ 'label' => __( 'Hindbærsnitten', 'hindbaersnitten' ) ]
     );
 } );
+
+require_once __DIR__ . '/includes/updates.php';
