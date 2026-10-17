@@ -1,3 +1,9 @@
+## 1.3.0
+
+- Hindbærrødt menubånd med hvid tekst og lyserød markering af aktiv side, hover og fokus.
+- Lyse rosa undermenuer, hindbærrøde mobilknapper og en smal rosa kant under headeren.
+- Eksisterende headerlayout, logo og responsive navigation bevares.
+
 ## 1.2.1
 
 - Forsideskabelonen viser nu indholdet fra den valgte statiske side via Indlægsindhold.

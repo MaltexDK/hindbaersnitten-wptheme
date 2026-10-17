@@ -132,3 +132,11 @@ under Sider for at ændre indholdet, inklusive eventuel hovedoverskrift.
 Hvis en tidligere Forside-skabelon er gemt i webstedseditoren, har den forrang.
 Gem en kopi af egne tilpasninger og nulstil Forside under Udseende → Editor →
 Skabeloner, eller erstat manuelt det faste indhold med blokken Indlægsindhold.
+
+## Hindbærfarvet menu i version 1.3.0
+
+Menubåndet er hindbærrødt med hvid tekst og lys rosa markeringer. Undermenuer
+er næsten hvide med rosa tone og kant. Burger- og lukkeknapper er hindbærrøde,
+og headeren afsluttes med en smal rosa kant. Den åbne mobilmenu er fortsat lys.
+Ændringen bruger den eksisterende `hs-header-menu` og ændrer ikke menuindhold
+eller gemte skabeloner.
